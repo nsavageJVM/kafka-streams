@@ -119,7 +119,7 @@ under the License.
                                  <copy file="target/${project.name}-${project.version}-dist.tar.gz"
                                         tofile="${project.basedir}/deploy/deploy.tar.gz"/>
                                  <untar src="${project.basedir}/deploy/deploy.tar.gz" dest="${project.basedir}/deploy/" compression="gzip" />
-                                 <delete dir="${project.basedir}/deploy/lib"/>
+                                 <!-- delete dir="${project.basedir}/deploy/lib"/ -->
                                 </tasks>
                             </configuration>
                         </execution>
