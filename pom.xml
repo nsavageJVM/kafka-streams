@@ -172,6 +172,12 @@ under the License.
             <classifier>dist</classifier>
             <type>tgz</type>
             <version>${samza.version}</version>
+            <exclusions>
+                <exclusion>  <!-- declare the exclusion here -->
+                    <groupId>org.apache.samza</groupId>
+                    <artifactId>samza-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.samza</groupId>
