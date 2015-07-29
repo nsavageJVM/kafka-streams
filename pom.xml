@@ -143,11 +143,27 @@ under the License.
             <groupId>org.apache.samza</groupId>
             <artifactId>samza-core_2.10</artifactId>
             <version>${samza.version}</version>
+            <exclusions>
+                <exclusion>  <!-- declare the exclusion here -->
+                    <groupId>org.apache.samza</groupId>
+                    <artifactId>samza-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.samza</groupId>
             <artifactId>samza-serializers_2.10</artifactId>
             <version>${samza.version}</version>
+            <exclusions>
+                <exclusion>  <!-- declare the exclusion here -->
+                    <groupId>org.apache.samza</groupId>
+                    <artifactId>samza-api</artifactId>
+                </exclusion>
+                <exclusion>  <!-- declare the exclusion here -->
+                    <groupId>org.apache.samza</groupId>
+                    <artifactId>samza-core_2.10</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.samza</groupId>
@@ -160,16 +176,50 @@ under the License.
             <groupId>org.apache.samza</groupId>
             <artifactId>samza-yarn_2.10</artifactId>
             <version>${samza.version}</version>
+            <exclusions>
+                <exclusion>  <!-- declare the exclusion here -->
+                    <groupId>org.apache.samza</groupId>
+                    <artifactId>samza-api</artifactId>
+                </exclusion>
+                <exclusion>  <!-- declare the exclusion here -->
+                    <groupId>org.apache.samza</groupId>
+                    <artifactId>samza-core_2.10</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.samza</groupId>
             <artifactId>samza-kv_2.10</artifactId>
             <version>${samza.version}</version>
+            <exclusions>
+                <exclusion>  <!-- declare the exclusion here -->
+                    <groupId>org.apache.samza</groupId>
+                    <artifactId>samza-api</artifactId>
+                </exclusion>
+                <exclusion>  <!-- declare the exclusion here -->
+                    <groupId>org.apache.samza</groupId>
+                    <artifactId>samza-core_2.10</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.samza</groupId>
             <artifactId>samza-kafka_2.10</artifactId>
             <version>${samza.version}</version>
+            <exclusions>
+                <exclusion>  <!-- declare the exclusion here -->
+                    <groupId>org.apache.samza</groupId>
+                    <artifactId>samza-api</artifactId>
+                </exclusion>
+                <exclusion>  <!-- declare the exclusion here -->
+                    <groupId>org.apache.samza</groupId>
+                    <artifactId>samza-core_2.10</artifactId>
+                </exclusion>
+                <exclusion>  <!-- declare the exclusion here -->
+                    <groupId>org.apache.samza</groupId>
+                    <artifactId>samza-serializers_2.10</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.kafka</groupId>
