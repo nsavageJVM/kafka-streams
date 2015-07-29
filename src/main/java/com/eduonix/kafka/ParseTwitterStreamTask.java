@@ -40,6 +40,9 @@ public class ParseTwitterStreamTask implements StreamTask  {
             Object     obj     = parser.parse(msg);
             JSONObject jsonObj = (JSONObject) obj;
             String     text    = (String) jsonObj.get("text");
+            if(text == null ||text.trim().isEmpty() ) {
+                text = "found text == null ||text.trim().isEmpty " ;
+            }
 
             collector.send(new OutgoingMessageEnvelope(new SystemStream("kafka", "tweets-parsed"), text));
         } catch (ParseException pe) {}
