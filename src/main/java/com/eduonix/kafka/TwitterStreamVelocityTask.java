@@ -39,7 +39,7 @@ public class TwitterStreamVelocityTask implements StreamTask, WindowableTask {
 
     @Override
     public void window(MessageCollector collector, TaskCoordinator coordinator) {
-        collector.send(new OutgoingMessageEnvelope(new SystemStream("kafka", "tweet-vel"), "" + tweets));
+        collector.send(new OutgoingMessageEnvelope(new SystemStream("kafka", "tweets-vel"), "" + tweets));
 
         // Reset counts after windowing.
         tweets = 0;
