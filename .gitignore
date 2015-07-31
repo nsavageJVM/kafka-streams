@@ -5,9 +5,10 @@ target
 *.class
 *.jar
 *.iml
-*part-r*
-*SUCCESS*
 .classpath
-uberjar
 *.tar.gz
+*.tgz
+lib
+bin
+conf
 
