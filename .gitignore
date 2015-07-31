@@ -9,4 +9,5 @@ target
 *SUCCESS*
 .classpath
 uberjar
+*.tar.gz
 
